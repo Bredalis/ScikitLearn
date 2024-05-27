@@ -24,10 +24,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Mostrar datos
 
-print(f"x train: \n {X_train}")
-print(f"\nx test: \n {X_test}")
-print(f"\ny train: \n {y_train}")
-print(f"\ny test: \n {y_test}")
+print(f"X train: \n {X_train}")
+print(f"\nX test: \n {X_test}")
+print(f"\nY train: \n {y_train}")
+print(f"\nY test: \n {y_test}")
 
 # Mostar cantidad de datos
 
@@ -37,7 +37,7 @@ print(y_train.shape)
 print(X_test.shape)
 print(y_test.shape)
 
-# Escalador 
+# Escalar los datos 
 
 escalador = StandardScaler()
 

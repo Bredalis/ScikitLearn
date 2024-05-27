@@ -12,22 +12,18 @@ from keras.datasets import boston_housing
 
 # Mostrar datos
 
-print(f"x train: \n{X_train}")
-print(f"\nx train cantidad: \n{X_train.shape}")
-print(f"\nx test: \n{X_test}")
-print(f"\nx test cantidad: \n{X_test.shape}")
-print(f"\ny train: \n{y_train}")
-print(f"\ny train cantidad: \n{y_train.shape}")
-print(f"\ny test: \n{y_test}")
-print(f"\ny test cantidad: \n{y_test.shape}")
+print(f"X train: \n{X_train}")
+print(f"\nX train cantidad: \n{X_train.shape}")
+print(f"\nX test: \n{X_test}")
+print(f"\nX test cantidad: \n{X_test.shape}")
+print(f"\nY train: \n{y_train}")
+print(f"\nY train cantidad: \n{y_train.shape}")
+print(f"\nY test: \n{y_test}")
+print(f"\nY test cantidad: \n{y_test.shape}")
 
 # Modelo
 
-clf = Ridge()
-
-# Entrenamiento
-
-clf.fit(X_train, y_train)
+clf = Ridge().fit(X_train, y_train)
 
 # Prediccion
 
@@ -41,7 +37,7 @@ df_y_pred = pd.DataFrame(y_pred, columns = ["y_pred"])
 
 print(f"\nConcatenacion: \n{pd.concat([df_y_test, df_y_pred], axis = 1)}")
 
-# Grafica
+# Grafica lineal
 
 plt.plot(y_pred)
 plt.plot(y_test)

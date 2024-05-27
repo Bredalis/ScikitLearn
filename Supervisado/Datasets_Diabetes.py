@@ -20,25 +20,20 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Modelo
 
-clf = KNeighborsClassifier()
-
-# Entrenamiento y prediccion
-
-clf.fit(X_train, y_train)
-
+clf = KNeighborsClassifier().fit(X_train, y_train)
 y_pred = clf.predict(X_test)
-print(f"Prediccion: \n{y_pred}")
 
+print(f"Prediccion: \n{y_pred}")
 print(mean_squared_error(y_pred, y_test))
 
-# Convertir las predicciones en un df
+# Guardar las predicciones en un df
 
 df_y_pred = pd.DataFrame(y_pred, columns = ["y_pred"])
 df_y_test = pd.DataFrame(y_test, columns = ["y_test"])
 
 print("\nPredicciones en df: \n", pd.concat([df_y_test, df_y_pred], axis = 1))
 
-# Grafica
+# Grafica lineal
 
 plt.plot(df_y_pred)
 plt.plot(df_y_test)

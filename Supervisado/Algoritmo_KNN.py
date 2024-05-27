@@ -14,11 +14,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y)
 
 # Modelo
 
-clf = KNeighborsClassifier()
-
-# Entrenamiento
-
-clf.fit(X_train, y_train)
+clf = KNeighborsClassifier().fit(X_train, y_train)
 
 # Prediccion
 

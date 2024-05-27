@@ -35,7 +35,6 @@ clf = MLPClassifier()
 # Entrenamiento y prediccion
 
 clf.fit(X_train, y_train)
-
 y_pred = clf.predict(X_test)
 
 # Uso de metricas

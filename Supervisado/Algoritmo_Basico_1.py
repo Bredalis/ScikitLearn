@@ -19,11 +19,7 @@ print(f"y: {y}")
 
 # Modelo
 
-model = linear_model.LinearRegression()
-
-# Entrenamiento
-
-model.fit(X, y)
+model = linear_model.LinearRegression().fit(X, y)
 
 intercept, slope = model.intercept_[0], model.coef_[0][0]
 money = 35000
@@ -32,7 +28,7 @@ satisfaction = model.predict([[money]])[0][0]
 print(f"Parameters: {intercept, slope}")
 print(f"Happy contries: {satisfaction}")
 
-# Grafica
+# Grafica lineal
 
 data.plot(
 	kind = "scatter", x = "GDP_per_capita", 
@@ -43,6 +39,8 @@ X = np.linspace(0, 60000, 10000)
 plt.plot(X, intercept + slope * X, "b")
 plt.plot([money, money], [0, satisfaction],  "r--")
 plt.plot(money, satisfaction, "ro")
+
+# Mostrar mensaje
 
 plt.text(50000, 3.1, r"$b = 4.85$", fontsize = 14, color = "b")
 plt.text(50000, 2.2, r"$w = 4.91 \times 10^{-5}", fontsize = 14, color = "b")
