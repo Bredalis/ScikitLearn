@@ -7,7 +7,7 @@ from sklearn.cluster import DBSCAN
 
 # Datos
 
-df = pd.read_csv("Casas.csv")
+df = pd.read_csv("../CSV/Casas.csv")
 print(f"df: \n {df}")
 
 # Modelo

@@ -3,7 +3,7 @@ import pandas as pd
 
 # Lectura de datos
 
-df = pd.read_csv("HRDataset_v14.csv")
+df = pd.read_csv("../CSV/HRDataset_V14.csv")
 print(f"DF: \n{df}")
 print(f"\nColumnas: \n{df.columns}")
 

@@ -8,7 +8,7 @@ from sklearn import linear_model
 
 # Datos
 
-data = pd.read_csv("Country_stats.csv", index_col = "Country")
+data = pd.read_csv("../CSV/Country_Stats.csv", index_col = "Country")
 
 X = np.c_[data["GDP_per_capita"]]
 y = np.c_[data["Life_satisfaction"]]
