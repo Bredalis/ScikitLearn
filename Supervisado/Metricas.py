@@ -1,5 +1,5 @@
 
-# Librerias
+# Librerías
 
 from sklearn.datasets import load_wine
 from sklearn.neural_network import MLPClassifier

@@ -1,5 +1,5 @@
 
-# Librerias
+# Librerías
 
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix

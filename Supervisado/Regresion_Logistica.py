@@ -1,5 +1,5 @@
 
-# Librerias
+# Librerías
 
 from sklearn.datasets import load_iris
 from sklearn.metrics import confusion_matrix
