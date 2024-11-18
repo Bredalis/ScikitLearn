@@ -5,21 +5,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import DBSCAN
 
-# Datos
-
+# Obtener datos
 df = pd.read_csv("../CSV/Casas.csv")
-print(f"df: \n {df}")
+print(f"df:\n {df}")
 
 # Modelo
-
 modelo = DBSCAN(eps = 2, min_samples = 10)
 
 # Entrenamiento
-
 modelo.fit_predict(df)
 
-# Grafica
-
+# Gráfica
 plt.figure(figsize = (7.5, 7.5))
 
 plt.scatter(df["A"], df["B"], c = df["A"])
